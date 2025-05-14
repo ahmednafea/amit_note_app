@@ -49,7 +49,12 @@ class NoteListScreenState extends State<NoteListScreen> {
                   child: CircularProgressIndicator(),
                 ),
               )
-              : ListView(children: notes.map((val)=>Text(val.title)).toList(),),
+              : ListView(
+                children:
+                    notes
+                        .map((note) => Card(margin: EdgeInsets.all(10)))
+                        .toList(),
+              ),
     );
   }
 }
